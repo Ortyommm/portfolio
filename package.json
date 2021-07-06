@@ -1,0 +1,49 @@
+{
+  "name": "webpack4plus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --env development --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "browserslist": "^4.16.6",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "^5.2.5",
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "fork-ts-checker-webpack-plugin": "^6.2.12",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^5.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^11.1.1",
+    "sharp": "^0.28.3",
+    "style-loader": "^2.0.0",
+    "thread-loader": "^3.0.4",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "raf": "^3.4.1"
+  }
+}
