@@ -1,0 +1,112 @@
+$inactiveIconColor: #FFD1C6;
+$activeIconColor: #FCF8F7;
+@import '../../../scss/main.scss';
+
+.aside {
+  background-color: $lightRed;
+  height: 100vh;
+  width: 80px;
+  position: fixed;
+  @media (max-width: 630px){
+    width: 100vw;
+    height: 80px;
+    display: block;
+    position: static;
+    @media (max-width: 390px){
+      height: 60px;
+    }
+  }
+
+  nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 630px){
+      height: 80px;
+      width: 100vw;
+      flex-direction: row;
+      align-content: space-between;
+
+      div {
+        display: inline-flex;
+        flex-direction: row;
+        height: 80px;
+      }
+    }
+
+  }
+}
+.fake_block {
+  width: 80px;
+  @media (max-width: 630px){
+    display: none;
+  }
+}
+
+.icon {
+  font-size: 44px;
+  @media (max-width: 390px){
+    font-size: 30px;
+  }
+}
+
+
+.icon__wrapper {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $inactiveIconColor;
+  transition: color .3s, border 1s;
+
+  @media (max-width: 630px){
+  margin: 0 10px;
+
+  }
+  @media (max-width: 390px){
+    height: 60px;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 2px;
+    height: 0%;
+    background: $activeIconColor;
+    transition: .2s height;
+  }
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2px;
+    height: 0%;
+    background: $activeIconColor;
+    transition: .2s height;
+  }
+  &.active {
+    color: $activeIconColor;
+    &:before {
+      height: 50%;
+    }
+    &:after {
+      height: 50%;
+    }
+    @media (max-width: 630px){
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+  }
+  &:hover {
+    color: $activeIconColor;
+  }
+}
