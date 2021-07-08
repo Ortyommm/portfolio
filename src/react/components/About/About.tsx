@@ -48,7 +48,7 @@ export default () => {
       </div>
 
       <div className={`${cl.image_right} ${cl.fact}`}>
-        <img src="/images/me.png" alt="Я в 2 года" />
+        <img src="/images/other/me.png" alt="Я в 2 года" />
       </div>
     </div>
   )
