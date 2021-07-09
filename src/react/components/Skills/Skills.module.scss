@@ -3,7 +3,11 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
+  animation: reveal .2s;
 }
+
+
+
 .skill {
   display: flex;
   align-items: center;
@@ -23,12 +27,16 @@
     font-size: 16px;
   }
 }
+
 .skill__img img{
   margin-right: 50px;
   width: 100px;
+  height: 100px;
   @media (max-width: 1090px) {
     margin-right: 40px;
   width: 80px;
+    height: 80px;
+
   }
   @media (max-width: 940px) {
 
@@ -36,15 +44,17 @@
   }
   @media (max-width: 740px) {
     width: 70px;
+    height: 70px;
+
   }
   @media (max-width: 520px){
     width: 50px;
+    height: 50px;
     margin-right: 10px;
   }
   @media (max-width: 370px){
     width: 40px;
+    height: 40px;
     margin-right: 5px;
   }
-
-
 }

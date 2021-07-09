@@ -14,7 +14,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
-module.exports = {
+const config = {
   entry: [/* '@babel/polyfill', */ './src/index.js'],
   output: {
     filename: 'bundle.js',
@@ -26,7 +26,6 @@ module.exports = {
     // },
   },
   target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
-  devtool: /*isProd ?*/ 'source-map' /*: "eval-cheap-source-map"*/,
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     watchContentBase: true,
@@ -130,3 +129,5 @@ module.exports = {
   },
   //target: 'web',
 }
+if (!isProd) config.devtool = 'source-map'
+module.exports = config

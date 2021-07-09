@@ -11,41 +11,17 @@ export default (props: object) => {
       <div className={cl.skills__container}>
         <div className={cl.skills}>
           <h1>Навыки</h1>
-          <Skill
-            icon={<img src="/images/icons/JS.svg" alt="JS" />}
-            text="JavaScript"
-          />
-          <Skill
-            icon={<img src="/images/icons/TS.svg" alt="TS" />}
-            text="Typescript"
-          />
-          <Skill
-            icon={<img src="/images/icons/React.svg" alt="React" />}
-            text="React"
-          />
-          <Skill
-            icon={<img src="/images/icons/CSS.svg" alt="CSS" />}
-            text="CSS (SCSS)"
-          />
-          <Skill
-            icon={<img src="/images/icons/HTML.svg" alt="HTML" />}
-            text="HTML"
-          />
+          <Skill src="/images/icons/JS.svg" text="JavaScript" />
+          <Skill src="/images/icons/TS.svg" text="Typescript" />
+          <Skill src="/images/icons/React.svg" text="React" />
+          <Skill src="/images/icons/CSS.svg" text="CSS (SCSS)" />
+          <Skill src="/images/icons/HTML.svg" text="HTML" />
         </div>
         <div className={cl.devtools}>
           <h1>ПО</h1>
-          <Skill
-            icon={<img src="/images/icons/Webstorm.svg" alt="Webstorm" />}
-            text="WebStorm"
-          />
-          <Skill
-            icon={<img src="/images/icons/Figma.svg" alt="Figma" />}
-            text="Figma"
-          />
-          <Skill
-            icon={<img src="/images/icons/Windows.svg" alt="Windows" />}
-            text="Windows 10"
-          />
+          <Skill src="/images/icons/Webstorm.svg" text="WebStorm" />
+          <Skill src="/images/icons/Figma.svg" text="Figma" />
+          <Skill src="/images/icons/Windows.svg" text="Windows 10" />
         </div>
       </div>
       <NavLink to="/projects" className="link">

@@ -4,11 +4,12 @@ $lightRed: #F34B46;
 $mainWhite: #FAFAFA;
 $mainGrey: #EDEDED;
 body {
-  overflow-x: hidden;
+  //overflow: hidden;
 }
 
 .page {
   display: flex;
+
   @media (max-width: 630px){
     display: block;
   }
@@ -20,7 +21,6 @@ body {
   padding-top: 118px;
   color: $textColor;
   margin: 0 auto;
-
   @media (max-width: 1490px){
     width: 900px;
     padding-top: 70px;
@@ -76,11 +76,12 @@ body {
 @keyframes bottomToTop {
   0% {
     opacity: 0;
-    transform: translateY(200%) ;
+    transform: translateY(30px) ;
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0%) ;
+    transform: translateY(0) ;
   }
 }
 
