@@ -3,7 +3,7 @@ import Skill from './Skill'
 import { Icon, InlineIcon } from '@iconify/react'
 import baselineArrowForward from '@iconify/icons-ic/baseline-arrow-forward'
 import { NavLink } from 'react-router-dom'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default (props: object) => {
   return (

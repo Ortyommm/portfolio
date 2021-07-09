@@ -28,12 +28,14 @@
     flex: 1.5;
   }
   flex: 2;
+
   animation: rightToLeft .5s;
 
   img {
     border-radius: 20px;
-    transition: transform .4s, box-shadow .4s;
     width: 100%;
+    opacity: 0;
+    transition: transform .4s, box-shadow .4s, opacity .6s;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, .2);

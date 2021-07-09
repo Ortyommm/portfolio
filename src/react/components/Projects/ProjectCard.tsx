@@ -1,12 +1,5 @@
 import cl from './Projects.module.scss'
-import {
-  MouseEvent,
-  ReactElement,
-  ReactEventHandler,
-  SyntheticEvent,
-  useRef,
-  useState,
-} from 'react'
+import { MouseEvent, ReactElement, useRef } from 'react'
 
 function onMouseMove(e: MouseEvent) {
   const halfWidth = (e.target as HTMLElement).offsetWidth / 2
@@ -18,10 +11,6 @@ function onMouseMove(e: MouseEvent) {
 
 function onMouseOut(e: MouseEvent) {
   ;(e.target as HTMLElement).style.transform = 'translate(0) scale(1)'
-}
-
-function replaceSrc(e: SyntheticEvent, src: string) {
-  ;(e.target as HTMLImageElement).src = src
 }
 
 export default ({
@@ -44,7 +33,6 @@ export default ({
     ;(info.current! as HTMLDivElement).style.transform = 'translateY(0)'
   }
 
-  const [isLoaded, setLoaded] = useState(false)
   const info = useRef(null)
   const initialSrc = src
   return (
@@ -53,19 +41,11 @@ export default ({
         <div className={cl.project_card__content}>
           <img
             onClick={revealInfo}
-            onLoad={
-              isLoaded
-                ? undefined
-                : (((e: SyntheticEvent) => {
-                    replaceSrc(e, initialSrc)
-                    setLoaded(true)
-                  }) as ReactEventHandler)
-            }
             onMouseMove={onMouseMove}
             onMouseOut={onMouseOut}
-            src="/images/other/placeholder.png"
+            src={initialSrc}
             alt={alt}
-            className={cl.site_img}
+            className={`${cl.site_img}`}
           />
           <div className={cl.project_card__info} ref={info} onClick={hideInfo}>
             {description ? (

@@ -166,3 +166,10 @@ a.ordinary_link {
   color: $lightRed;
 }
 
+img {
+  transition: filter .5s;
+}
+
+.lazy-img {
+  filter: blur(20px);
+}

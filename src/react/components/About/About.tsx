@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react'
+import React, { SyntheticEvent, useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Icon, InlineIcon } from '@iconify/react'
 import baselineArrowForward from '@iconify/icons-ic/baseline-arrow-forward'
@@ -6,6 +6,11 @@ import baselineArrowForward from '@iconify/icons-ic/baseline-arrow-forward'
 import cl from './About.module.scss'
 
 export default () => {
+  function onImageLoad(e: SyntheticEvent) {
+    ;(imgRef.current! as HTMLImageElement).style.opacity = '1'
+  }
+  const imgRef = useRef(null)
+
   return (
     <div className={cl.about}>
       <div className={cl.text}>
@@ -48,7 +53,12 @@ export default () => {
       </div>
 
       <div className={`${cl.image_right} ${cl.fact}`}>
-        <img src="/images/other/me.png" alt="Я в 2 года" />
+        <img
+          src="/images/other/me.png"
+          alt="Я в 2 года"
+          onLoad={onImageLoad}
+          ref={imgRef}
+        />
       </div>
     </div>
   )
