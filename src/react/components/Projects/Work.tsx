@@ -11,12 +11,6 @@ export default () => {
         git="https://github.com/Ortyommm/portfolio"
         description="Сайт написан при помощи связки React + TypeScript."
       />
-      <ProjectCard
-        src="/images/project-images/kazanok.png"
-        alt="Казанок"
-        href="https://kazanok-sochi.ru/"
-        description="Сайт магазина. Добавление товаров происходит через CMS Strapi. Установкой сайта и CMS на сервер (VDS) тоже занимался я."
-      />
     </React.Fragment>
   )
 }

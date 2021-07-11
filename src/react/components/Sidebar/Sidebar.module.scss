@@ -12,9 +12,9 @@ $activeIconColor: #FCF8F7;
     height: 80px;
     display: block;
     position: static;
-    @media (max-width: 390px){
-      height: 60px;
-    }
+  }
+  @media (max-width: 390px){
+    height: 60px;
   }
 
   nav {
@@ -46,8 +46,11 @@ $activeIconColor: #FCF8F7;
 
 .icon {
   font-size: 44px;
-  @media (max-width: 390px){
-    font-size: 30px;
+  @media (max-width: 440px){
+    font-size: 35px;
+  }
+  @media (max-width: 370px){
+    font-size: 28px;
   }
 }
 

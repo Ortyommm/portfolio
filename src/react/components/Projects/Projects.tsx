@@ -4,7 +4,6 @@ import sharpWork from '@iconify/icons-ic/sharp-work'
 import cl from '../Projects/Projects.module.scss'
 import { NavLink, Redirect, Route, Switch } from 'react-router-dom'
 import Work from './Work'
-import Layout from './Layout'
 import Self from './Self'
 import React from 'react'
 
@@ -31,9 +30,6 @@ export default () => {
         <NavLink activeClassName={cl.active} to={'/projects/work'}>
           Работы
         </NavLink>
-        <NavLink activeClassName={cl.active} to={'/projects/layout'}>
-          Верстка
-        </NavLink>
         <NavLink activeClassName={cl.active} to={'/projects/for_me'}>
           Для себя
         </NavLink>
@@ -41,7 +37,6 @@ export default () => {
       <div className={cl.project_cards__container}>
         <Switch>
           <Route path={'/projects/work'} render={() => <Work />} />
-          <Route path={'/projects/layout'} render={() => <Layout />} />
           <Route path={'/projects/for_me'} render={() => <Self />} />
           <Redirect from="/projects" to={'/projects/work'} />
         </Switch>

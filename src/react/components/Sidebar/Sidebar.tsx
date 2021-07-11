@@ -3,6 +3,7 @@ import baselineAccountCircle from '@iconify/icons-ic/baseline-account-circle'
 import baselineConstruction from '@iconify/icons-ic/baseline-construction'
 import baselineDashboard from '@iconify/icons-ic/baseline-dashboard'
 import telegramFill from '@iconify/icons-akar-icons/telegram-fill'
+import vkFill from '@iconify/icons-akar-icons/vk-fill'
 import githubFill from '@iconify/icons-akar-icons/github-fill'
 
 import SidebarNavLink from './SidebarNavLink'
@@ -32,6 +33,10 @@ const Sidebar = () => {
             />
           </div>
           <div className={cl.sidebar_bottom}>
+            <SidebarLink
+              href="https://vk.com/im?sel=391852632"
+              icon={<Icon icon={vkFill} className={cl.icon} />}
+            />
             <SidebarLink
               href="https://t.me/Meyl_ON"
               icon={<Icon icon={telegramFill} className={cl.icon} />}
