@@ -52,6 +52,12 @@ $activeIconColor: #FCF8F7;
   @media (max-width: 370px){
     font-size: 28px;
   }
+  @media (max-height: 550px){
+    font-size: 35px;
+  }
+  @media (max-height: 420px){
+    font-size: 28px;
+  }
 }
 
 
@@ -71,6 +77,14 @@ $activeIconColor: #FCF8F7;
   @media (max-width: 390px){
     height: 60px;
   }
+  @media (max-height: 550px){
+    height: 60px;
+  }
+  @media (max-height: 420px){
+    height: 50px;
+
+  }
+
   &:before {
     position: absolute;
     top: 0;

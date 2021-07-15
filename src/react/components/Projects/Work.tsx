@@ -11,6 +11,13 @@ export default () => {
         git="https://github.com/Ortyommm/portfolio"
         description="Сайт написан при помощи связки React + TypeScript."
       />
+      <ProjectCard
+        src="/images/project-images/onenilla.png"
+        alt="Сайт OneNilla"
+        git="https://github.com/Ortyommm/onenilla"
+        href="https://onenilla.netlify.app"
+        description="Сайт сервера по игре Minecraft. Написан при помощи React + TypeScript, использован Redux."
+      />
     </React.Fragment>
   )
 }
