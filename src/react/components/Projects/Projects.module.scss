@@ -41,9 +41,9 @@
   padding: 5px 20px;
   align-items: center;
   margin-bottom: 44px;
-  @media  (max-width: 490px){
+  @media  (max-width: 400px){
     margin-bottom: 24px;
-    font-size: 15px;
+    font-size: 18px;
   }
   a {
     position: relative;
@@ -101,7 +101,7 @@ align-items: flex-start;
     width: 150px;
     margin: 10px  ;
   }
-  @media (max-width: 430px){
+  @media (max-width: 370px){
     width: 135px;
   }
 

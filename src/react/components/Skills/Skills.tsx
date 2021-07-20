@@ -10,7 +10,7 @@ export default (props: object) => {
     <React.Fragment>
       <div className={cl.skills__container}>
         <div className={cl.skills}>
-          <h1>Навыки</h1>
+          <h2>Навыки</h2>
           <Skill src="/images/icons/JS.svg" text="JavaScript" />
           <Skill src="/images/icons/TS.svg" text="Typescript" />
           <Skill src="/images/icons/React.svg" text="React" />
@@ -18,7 +18,7 @@ export default (props: object) => {
           <Skill src="/images/icons/HTML.svg" text="HTML" />
         </div>
         <div className={cl.devtools}>
-          <h1>ПО</h1>
+          <h2>ПО</h2>
           <Skill src="/images/icons/Webstorm.svg" text="WebStorm" />
           <Skill src="/images/icons/Figma.svg" text="Figma" />
           <Skill src="/images/icons/Windows.svg" text="Windows 10" />

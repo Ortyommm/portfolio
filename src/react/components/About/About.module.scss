@@ -22,6 +22,7 @@
 .image_right {
   margin-top: 50px;
   align-self: flex-start;
+  max-width: 320px;
   @media (max-width: 1090px){
     padding-top: 50px;
     flex: 1.5;

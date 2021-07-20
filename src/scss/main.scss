@@ -16,6 +16,16 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .container {
+  @media (min-width: 2100px){
+    transform: scale(1.2);
+  }
+  @media (min-width: 2300px){
+    transform: scale(1.3);
+  }
+  @media (min-width: 2560px){
+    margin-top: 40px;
+    transform: scale(1.4);
+  }
   width: 1300px;
   font-weight: 400;
   padding-top: 118px;
@@ -96,7 +106,6 @@ h1 {
   @media (max-width: 740px){
     font-size: 50px;
     margin-bottom: 20px;
-
   }
   @media (max-width: 520px){
     font-size: 40px;
@@ -107,8 +116,26 @@ h1 {
   @media (max-width: 370px){
     margin-bottom: 15px;
   }
+}
 
-
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  animation: textFall .5s;
+  @media (max-width: 740px){
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 520px){
+    font-size: 35px;
+  }
+  @media (max-width: 430px){
+    font-size: 30px;
+  }
+  @media (max-width: 370px){
+    margin-bottom: 15px;
+  }
 }
 
 .paragraph {
