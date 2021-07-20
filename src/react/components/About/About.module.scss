@@ -11,7 +11,7 @@
 @keyframes rightToLeft {
   0% {
     opacity: 0;
-    transform: translateX(50%) ;
+    transform: translateX(3.5vw) ;
   }
   100% {
     opacity: 1;
@@ -23,12 +23,10 @@
   margin-top: 50px;
   align-self: flex-start;
   @media (max-width: 1090px){
-
     padding-top: 50px;
     flex: 1.5;
   }
   flex: 2;
-
   animation: rightToLeft .5s;
 
   img {
