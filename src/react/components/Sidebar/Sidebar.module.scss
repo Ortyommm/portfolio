@@ -47,16 +47,10 @@ $activeIconColor: #FCF8F7;
 
 .icon {
   font-size: 44px;
-  @media (max-width: 440px){
+  @media (max-width: 440px), (max-height: 550px){
     font-size: 35px;
   }
-  @media (max-width: 370px){
-    font-size: 28px;
-  }
-  @media (max-height: 550px){
-    font-size: 35px;
-  }
-  @media (max-height: 420px){
+  @media (max-width: 370px), (max-height: 420px){
     font-size: 28px;
   }
 }
@@ -75,15 +69,12 @@ $activeIconColor: #FCF8F7;
   margin: 0 10px;
 
   }
-  @media (max-width: 390px){
+  @media (max-width: 390px), (max-height: 550px){
     height: 60px;
   }
-  @media (max-height: 550px){
-    height: 60px;
-  }
-  @media (max-height: 420px){
+  //
+  @media (max-height: 420px) and (min-width: 630px){
     height: 50px;
-
   }
 
   &:before {

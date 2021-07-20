@@ -49,7 +49,12 @@ export default ({
           />
           <div className={cl.project_card__info} ref={info} onClick={hideInfo}>
             {description ? (
-              <div className={cl.description}>{description}</div>
+              <div
+                className={cl.description}
+                // onClick={(e) => e.stopPropagation()}
+              >
+                {description}
+              </div>
             ) : null}
             <div className={cl.project_links}>
               {href ? (
