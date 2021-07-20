@@ -63,7 +63,7 @@ $activeIconColor: #FCF8F7;
 }
 
 
-.icon__wrapper {
+a.icon__wrapper {
   position: relative;
   height: 80px;
   display: flex;
@@ -105,7 +105,7 @@ $activeIconColor: #FCF8F7;
     transition: .2s height;
   }
   &.active {
-    color: $activeIconColor;
+    color: $activeIconColor!important;
     &:before {
       height: 50%;
     }
@@ -123,6 +123,6 @@ $activeIconColor: #FCF8F7;
 
   }
   &:hover {
-    color: $activeIconColor;
+    color: $activeIconColor!important;
   }
 }

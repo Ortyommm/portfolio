@@ -8,6 +8,7 @@ const SidebarNavLink = ({ icon, to }: { icon: ReactElement; to: string }) => {
       className={`${cl.icon__wrapper}`}
       to={to}
       activeClassName={cl.active}
+      style={{ color: '#FFD1C6' }}
     >
       {icon}
     </NavLink>
