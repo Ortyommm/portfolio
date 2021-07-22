@@ -16,6 +16,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .container {
+  position: relative;
+  height: 100vh;
   @media (min-width: 2100px){
     margin-top: 80px;
     transform: scale(1.2);
@@ -51,6 +53,9 @@ body {
   @media (max-width: 740px){
     width: 500px;
     padding-top: 20px;
+  }
+  @media (max-width: 630px) {
+    height: calc(100vh - 80px);
   }
   @media (max-width: 520px){
     width: 400px;

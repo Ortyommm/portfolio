@@ -17,7 +17,8 @@ const isProd = !isDev
 const config = {
   entry: [/* '@babel/polyfill', */ './src/index.js'],
   output: {
-    filename: 'bundle.js',
+    filename: '[contenthash].js',
+    chunkFilename: '[contenthash].chunk.js',
     path: path.resolve(__dirname, 'dist'), //второе - куда
     publicPath: '/',
     // publicPath: path.resolve(__dirname, '/build/')
@@ -114,6 +115,20 @@ const config = {
   },
   optimization: {
     // minimize: true,
+    splitChunks: {
+      // chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
+    runtimeChunk: {
+      name: (entrypoint) => `runtime-${entrypoint.name}`,
+    },
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin({
