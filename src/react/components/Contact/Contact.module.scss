@@ -1,22 +1,22 @@
 @import '../../../scss/main';
 
 .message_form {
-  margin-top: 20px;
+  //margin-top: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 20px auto 0;
+  @media (max-width: 330px) {
+    width: 95%;
+  }
 }
 
 .input_wrapper {
   display: flex;
   flex-direction: row;
   //justify-content: space-between;
-
 }
 
-@keyframes submit-gradient {
-
-}
 
 %transiton {
   transition: transform .3s, box-shadow .3s;
@@ -63,10 +63,7 @@
   resize: vertical;
   min-height: 300px;
   max-height: 550px;
-
   box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
-
-
 }
 
 .btn_submit{
