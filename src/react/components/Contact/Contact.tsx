@@ -18,7 +18,7 @@ export default () => {
     } catch (err) {
       return setError(
         err?.response?.data?.message ||
-          'Свяжитесь другим способом, email сейчас не доступен!'
+          'Свяжитесь другим способом, email сейчас не доступен! Или попробуйте еще раз.'
       )
     }
     setIsSent(true)
