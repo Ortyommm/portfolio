@@ -16,7 +16,10 @@ export default () => {
     try {
       await mailer.post('/', { name, email, message })
     } catch (err) {
-      return setError(err.response.data.message)
+      return setError(
+        err?.response?.data?.message ||
+          'Свяжитесь другим способом, email сейчас не доступен!'
+      )
     }
     setIsSent(true)
   }
@@ -82,7 +85,7 @@ export default () => {
           </button>
         </div>
       </form>
-      <p className={cl.error}>{error}</p>
+      {isSent ? null : <p className={cl.error}>{error}</p>}
       {isSent ? (
         <p className={cl.send_message}>Сообщение успешно отправлено!</p>
       ) : null}
