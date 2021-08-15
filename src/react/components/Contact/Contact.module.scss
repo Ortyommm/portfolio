@@ -1,0 +1,101 @@
+@import '../../../scss/main';
+
+.message_form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+
+}
+
+@keyframes submit-gradient {
+
+}
+
+%transiton {
+  transition: transform .3s, box-shadow .3s;
+  &:hover, &:focus{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+    transform: scale(1.02);
+  }
+}
+
+%input {
+  @extend %transiton;
+  font-family: Montserrat,sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  background-color: $mainWhite;
+  color: #434343;
+  @media (max-width: 430px) {
+    font-size: 15px;
+  }
+  @media (max-width: 360px) {
+    font-size: 13.5px;
+  }
+}
+
+.name_message {
+  @extend %input;
+  width: 40%;
+  height: 45px;
+  margin-right: 5%;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+
+}
+
+.mail_message {
+  @extend %input;
+  width: 55%;
+  height: 45px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+}
+
+.message_textarea {
+  @extend %input;
+  margin-top: 45px;
+  resize: vertical;
+  min-height: 300px;
+  max-height: 550px;
+
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+
+
+}
+
+.btn_submit{
+  @extend %transiton;
+  color: #434343;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 25px;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  background-color: $mainWhite;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+%message {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.error {
+  @extend %message;
+  color: $mainRed;
+}
+
+.send_message {
+  @extend %message;
+  color: #88C276;
+}

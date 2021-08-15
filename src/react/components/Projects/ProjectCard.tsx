@@ -47,7 +47,10 @@ export default ({
             alt={alt}
             className={`${cl.site_img}`}
           />
-          <div className={cl.project_card__info} ref={info} onClick={hideInfo}>
+          <div className={cl.project_card__info} ref={info}>
+            <div className={cl.project_card__controls}>
+              <img src={'/images/icons/close.svg'} onClick={hideInfo} />
+            </div>
             {description ? (
               <div
                 className={cl.description}

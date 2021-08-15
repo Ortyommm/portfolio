@@ -28,10 +28,10 @@ export default () => {
       </div>
       <div className={cl.projects__nav}>
         <NavLink activeClassName={cl.active} to={'/projects/work'}>
-          Работы
+          Проекты
         </NavLink>
         <NavLink activeClassName={cl.active} to={'/projects/for_me'}>
-          Для себя
+          Мини-проекты
         </NavLink>
       </div>
       <div className={cl.project_cards__container}>

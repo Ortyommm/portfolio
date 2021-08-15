@@ -2,6 +2,7 @@ import { Icon, InlineIcon } from '@iconify/react'
 import baselineAccountCircle from '@iconify/icons-ic/baseline-account-circle'
 import baselineConstruction from '@iconify/icons-ic/baseline-construction'
 import baselineDashboard from '@iconify/icons-ic/baseline-dashboard'
+import baselineMail from '@iconify/icons-ic/baseline-mail'
 import telegramFill from '@iconify/icons-akar-icons/telegram-fill'
 import vkFill from '@iconify/icons-akar-icons/vk-fill'
 import githubFill from '@iconify/icons-akar-icons/github-fill'
@@ -30,6 +31,10 @@ const Sidebar = () => {
             <SidebarNavLink
               to="/projects"
               icon={<Icon icon={baselineDashboard} className={cl.icon} />}
+            />
+            <SidebarNavLink
+              to="/contact"
+              icon={<Icon icon={baselineMail} className={cl.icon} />}
             />
           </div>
           <div className={cl.sidebar_bottom}>

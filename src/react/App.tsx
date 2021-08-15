@@ -10,6 +10,7 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
 const About = React.lazy(() => import('./components/About/About'))
 const Skills = React.lazy(() => import('./components/Skills/Skills'))
 const Projects = React.lazy(() => import('./components/Projects/Projects'))
+const Contact = React.lazy(() => import('./components/Contact/Contact'))
 
 export default () => {
   return (
@@ -22,6 +23,7 @@ export default () => {
               <Route path="/about" render={() => <About />} />
               <Route path="/skills" render={() => <Skills />} />
               <Route path="/projects" render={() => <Projects />} />
+              <Route path="/contact" render={() => <Contact />} />
               <Redirect from="/" to="/about" />
             </Switch>
           </React.Suspense>

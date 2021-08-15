@@ -12,10 +12,12 @@ export default (props: object) => {
         <div className={cl.skills}>
           <h2>Навыки</h2>
           <Skill src="/images/icons/JS.svg" text="JavaScript" />
-          <Skill src="/images/icons/TS.svg" text="Typescript" />
+          <Skill src="/images/icons/TS.svg" text="TypeScript" />
           <Skill src="/images/icons/React.svg" text="React" />
+          <Skill src="/images/icons/Redux.svg" text="Redux" />
           <Skill src="/images/icons/CSS.svg" text="CSS (SCSS)" />
           <Skill src="/images/icons/HTML.svg" text="HTML" />
+          <Skill src="/images/icons/Node.svg" text="Node.js" />
         </div>
         <div className={cl.devtools}>
           <h2>ПО</h2>

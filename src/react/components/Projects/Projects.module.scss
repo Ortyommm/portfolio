@@ -33,7 +33,7 @@
 .projects__nav {
   font-size: 20px;
   width: 100%;
-  min-height: 50px;
+  min-height: 60px;
   background-color: $lightRed;
   border-radius: 20px;
   display: flex;
@@ -41,9 +41,12 @@
   padding: 5px 20px;
   align-items: center;
   margin-bottom: 44px;
-  @media  (max-width: 400px){
+  @media  (max-width: 430px){
     margin-bottom: 24px;
     font-size: 18px;
+  }
+  @media  (max-width: 370px){
+    font-size: 16px;
   }
   a {
     position: relative;
@@ -76,8 +79,6 @@ align-items: flex-start;
 
 }
 
-
-
 .project_card {
   width: 300px;
   margin: 10px 10px 30px ;
@@ -86,25 +87,37 @@ align-items: flex-start;
   position: relative;
   word-wrap: break-word;
   @media (max-width: 1490px){
-    width: 200px;
+    width: 280px;
+  }
+  @media (max-width: 1090px){
+    width: 330px;
   }
   @media (max-width: 940px){
-    width: 180px;
+    width: 280px;
   }
   @media (max-width: 740px){
-    width: 140px;
+    width: 230px;
   }
   @media (max-width: 520px){
-    width: 180px;
+    width: 380px;
   }
   @media (max-width: 430px){
-    width: 150px;
-    margin: 10px  ;
+    width: 320px;
+    margin: 10px;
   }
   @media (max-width: 370px){
-    width: 135px;
+    width: 300px;
   }
 
+}
+
+.project_card__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+  img {
+    cursor: pointer;
+  }
 }
 
 .project_card__content {
@@ -112,19 +125,25 @@ align-items: flex-start;
   height: 300px;
 
   @media (max-width: 1490px){
-    height: 200px;
+    height: 280px;
+  }
+  @media (max-width: 1090px){
+    height: 330px;
   }
   @media (max-width: 940px){
-    height: 180px;
+    height: 280px;
   }
   @media (max-width: 740px){
-    height: 140px;
+    height: 230px;
   }
   @media (max-width: 520px){
-    height: 180px;
+    height: 380px;
   }
   @media (max-width: 430px){
-    height: 130px;
+    height: 320px;
+  }
+  @media (max-width: 370px){
+    height: 300px;
   }
 
 position: relative;
@@ -144,14 +163,23 @@ position: relative;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 18px;
 
-  //@media (max-width: 940px) {
-  //  font-size: 11px;
-  //}
-  @media (max-width: 370px){
-    font-size: 10.5px;
+  @media (max-width: 1490px) {
+    font-size: 16px;
   }
+  //@media (max-width: 940px) {
+  //  font-size: 14px;
+  //}
+  @media (max-width: 740px) {
+    font-size: 15px;
+  }
+  @media (max-width: 520px) {
+    font-size: 20px;
+  }
+  //@media (max-width: 370px){
+  //  font-size: 10.5px;
+  //}
 }
 
 .project_links {
