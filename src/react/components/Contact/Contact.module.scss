@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 100%;
   margin: 20px auto 0;
+
   @media (max-width: 330px) {
     width: 95%;
   }
@@ -70,7 +71,6 @@
   @extend %transiton;
   color: #434343;
   font-family: 'Montserrat', sans-serif;
-  margin-top: 25px;
   width: 200px;
   height: 60px;
   font-size: 20px;
@@ -78,13 +78,26 @@
   background-color: $mainWhite;
   box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
   cursor: pointer;
-  margin-bottom: 20px;
+  margin: 25px 0 20px 0;
+
 }
 
 %message {
   margin-top: 20px;
   font-size: 32px;
   font-weight: 500;
+
+  @media (max-width: 940px) {
+    font-size: 26px;
+  }
+  @media (max-width: 630px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 18px;
+    margin-top: 5px;
+  }
 }
 
 .error {

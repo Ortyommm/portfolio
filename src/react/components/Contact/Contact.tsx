@@ -12,7 +12,9 @@ export default () => {
   async function onFormSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     if (name.trim() === '' || email.trim() === '' || message.trim() === '')
-      return setError('Заполните все поля!')
+      return setError(
+        'Свяжитесь другим способом, email сейчас не доступен! Или попробуйте еще раз.'
+      )
     try {
       await mailer.post('/', { name, email, message })
     } catch (err) {
