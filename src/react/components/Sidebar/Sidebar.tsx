@@ -43,7 +43,7 @@ const Sidebar = () => {
               icon={<Icon icon={vkFill} className={cl.icon} />}
             />
             <SidebarLink
-              href="https://t.me/Meyl_ON"
+              href="https://t.me/artem_prog"
               icon={<Icon icon={telegramFill} className={cl.icon} />}
             />
             <SidebarLink
