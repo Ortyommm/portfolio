@@ -1,0 +1,51 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(3.5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.image_right {
+  margin-top: 50px;
+  align-self: flex-start;
+  max-width: 320px;
+  margin-left: 30px;
+  @media (max-width: 1090px) {
+    padding-top: 50px;
+    flex: 1.5;
+  }
+  flex: 2;
+  animation: rightToLeft 0.5s;
+
+  img {
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    //opacity: 0;
+    transition: transform 0.4s, box-shadow 0.4s, opacity 0.4s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.fact {
+  @media (max-width: 1090px) {
+    display: none;
+  }
+}

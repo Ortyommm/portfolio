@@ -1,0 +1,26 @@
+.language_container {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 32px;
+  img {
+    width: 32px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    //pointer-events: none;
+  }
+  @media (max-width: 630px) {
+    position: relative;
+    right: 0;
+    top: 0;
+    padding: 10px 5px 0 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
