@@ -3,6 +3,7 @@ import * as styles from "./LanguageSelector.module.scss";
 import { navigate } from "gatsby";
 import isBrowser from "../../helpers/isBrowser";
 import { Languages } from "../../types";
+import fromEnToRuPath from "../../helpers/fromEnToRuPath";
 
 export default function LanguageSelector({ lang }: { lang: Languages }) {
   let isEn: boolean | undefined;
@@ -18,8 +19,7 @@ export default function LanguageSelector({ lang }: { lang: Languages }) {
     let url = "";
     if (isEn) {
       localStorage.setItem("language", "ru");
-      const newPath = window.location.pathname.replace("/en", "/");
-      url = newPath.replace(/\/\//g, "/");
+      url = fromEnToRuPath(window.location.pathname);
     } else {
       localStorage.setItem("language", "en");
       if (window.location.pathname === "/") url = "/en";

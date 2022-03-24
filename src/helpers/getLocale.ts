@@ -8,7 +8,9 @@ export function getLocaleByPathName() {
 }
 
 export function getLocaleByNavigator() {
-  const isRu = window.navigator.language === "ru-RU";
+  const isRu =
+    window.navigator.language === "ru-RU" ||
+    window.navigator.languages.includes("ru");
   return isRu ? "ru" : "en";
 }
 

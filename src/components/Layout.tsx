@@ -8,6 +8,7 @@ import isBrowser from "../helpers/isBrowser";
 import { Languages } from "../types";
 import { Helmet } from "react-helmet";
 import locales from "../data/locales";
+import fromEnToRuPath from "../helpers/fromEnToRuPath";
 export default function Layout({
   children,
   lang,
@@ -17,12 +18,25 @@ export default function Layout({
 }) {
   if (isBrowser()) {
     const locale = getLocaleByNavigator();
+    const languageInLocalStorage = localStorage.getItem("language");
     if (
-      !isValidLanguage(localStorage.getItem("language")) &&
+      !isValidLanguage(languageInLocalStorage) &&
       locale === "en" &&
       !window.location.pathname.startsWith("/en")
     ) {
-      navigate("/en");
+      navigate("/en" + window.location.pathname);
+    } else if (isValidLanguage(languageInLocalStorage)) {
+      if (
+        languageInLocalStorage === "ru" &&
+        window.location.pathname.startsWith("/en")
+      ) {
+        navigate(fromEnToRuPath(window.location.pathname));
+      } else if (
+        languageInLocalStorage === "en" &&
+        !window.location.pathname.startsWith("/en")
+      ) {
+        navigate("/en" + window.location.pathname);
+      }
     }
   }
 
