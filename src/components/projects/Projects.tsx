@@ -1,7 +1,7 @@
 import { Icon, InlineIcon } from "@iconify/react";
 import sharpModeEditOutline from "@iconify/icons-ic/sharp-mode-edit-outline";
 import sharpWork from "@iconify/icons-ic/sharp-work";
-import * as cl from "../Projects/Projects.module.scss";
+import * as cl from "./Projects.module.scss";
 import React, { useState } from "react";
 import Paragraph from "../../components/Typography/Paragraph";
 import Layout from "../../components/Layout";
