@@ -24,18 +24,18 @@ export default function Layout({
       locale === "en" &&
       !window.location.pathname.startsWith("/en")
     ) {
-      navigate("/en" + window.location.pathname);
+      navigate("/en" + window.location.pathname, { replace: true });
     } else if (isValidLanguage(languageInLocalStorage)) {
       if (
         languageInLocalStorage === "ru" &&
         window.location.pathname.startsWith("/en")
       ) {
-        navigate(fromEnToRuPath(window.location.pathname));
+        navigate(fromEnToRuPath(window.location.pathname), { replace: true });
       } else if (
         languageInLocalStorage === "en" &&
         !window.location.pathname.startsWith("/en")
       ) {
-        navigate("/en" + window.location.pathname);
+        navigate("/en" + window.location.pathname, { replace: true });
       }
     }
   }

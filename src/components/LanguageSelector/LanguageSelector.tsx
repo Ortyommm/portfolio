@@ -25,7 +25,7 @@ export default function LanguageSelector({ lang }: { lang: Languages }) {
       if (window.location.pathname === "/") url = "/en";
       else url = "/en" + window.location.pathname;
     }
-    navigate(url);
+    navigate(url, { replace: true });
   }
 
   return (
