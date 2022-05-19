@@ -41,6 +41,10 @@ export default {
       description:
         "Сайт сервера по игре Minecraft. Написан при помощи React + TypeScript, использован Redux.",
     },
+    urlShortener: {
+      title: "Сервис коротких ссылок",
+      description: "Укорачиватель ссылок на Nest.js. Пример: ",
+    },
   },
   contacts: {
     title: "Где меня можно найти?",

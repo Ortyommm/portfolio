@@ -22,6 +22,20 @@ export default function Projects({ lang }: { lang: Languages }) {
       description: projectsText.thisSite.description,
     },
     {
+      src: "/images/project-images/nest-url-shortener.png",
+      alt: projectsText.urlShortener.title,
+      git: "https://github.com/Ortyommm/nest-url-shortener",
+      href: "https://artemdev.com/c/Us",
+      description: (
+        <>
+          <p>{projectsText.urlShortener.description}</p>
+          <p style={{ marginTop: "2px" }}>
+            <a href="https://artemdev.com/c/Us">https://artemdev.com/c/Us</a>
+          </p>
+        </>
+      ),
+    },
+    {
       src: "/images/project-images/localpass.png",
       alt: "LocalPass",
       git: `${githubLink}/LocalPass`,

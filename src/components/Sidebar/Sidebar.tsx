@@ -8,13 +8,9 @@ import vkFill from "@iconify/icons-akar-icons/vk-fill";
 import githubFill from "@iconify/icons-akar-icons/github-fill";
 
 import * as cl from "./Sidebar.module.scss";
-import SidebarLink from "./SidebarLink";
 import React from "react";
 import SidebarLinks from "./SidebarLinks";
 import { githubLink, telegramLink, vkLink } from "../../config";
-import { getLocaleByPathName } from "../../helpers/getLocale";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
-import isBrowser from "../../helpers/isBrowser";
 import { Languages } from "../../types";
 
 function localePrefix(locale: string) {

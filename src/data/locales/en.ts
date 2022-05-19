@@ -41,6 +41,10 @@ export default {
       description:
         "Website for the Minecraft server. Written with React + TypeScript, used Redux.",
     },
+    urlShortener: {
+      title: "URL shortener",
+      description: "Nest.js link shortener. Example: ",
+    },
   },
   contacts: {
     title: "My contacts and social networks",
