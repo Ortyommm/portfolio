@@ -27,8 +27,8 @@ jobs:
     
     - run: |
           npm i
-          touch .env
-          echo YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API }} >> .env
+          touch .env.production
+          echo YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API }} >> .env.production
           npm run build
     
     - name: Copy repository contents via scp
