@@ -31,11 +31,11 @@ jobs:
     
     - name: Copy repository contents via scp
       uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
       with:
         source: "."
         target: "/home/main/portfolio-test"
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        password: ${{ secrets.PASSWORD }}
+        
