@@ -31,7 +31,11 @@ export default ({ lang }: { lang: Languages }) => {
           </Paragraph>
           <Paragraph>{aboutText.otherSkills}.</Paragraph>
           <Paragraph>{aboutText.siteInfo}.</Paragraph>
-          <BottomLink to="/skills" title={locales[lang].bottomLinks.skills} />
+          <BottomLink
+            to="/skills"
+            title={locales[lang].bottomLinks.skills}
+            lang={lang}
+          />
         </div>
 
         <div className={`${cl.image_right} ${cl.fact}`}>

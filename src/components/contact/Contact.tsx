@@ -65,7 +65,11 @@ export default function Contact({ lang }: { lang: Languages }) {
     <Layout lang={lang}>
       <h1>{contactText.title}</h1>
       <ContactItems contactsData={contactItems} />
-      <BottomLink to="/videos" title={locales[lang].bottomLinks.videos} />
+      <BottomLink
+        to="/videos"
+        title={locales[lang].bottomLinks.videos}
+        lang={lang}
+      />
     </Layout>
   );
 }

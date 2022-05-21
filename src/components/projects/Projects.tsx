@@ -67,7 +67,11 @@ export default function Projects({ lang }: { lang: Languages }) {
         </div>
         <ProjectsList projects={projects} lang={lang} />
       </div>
-      <BottomLink to="/contact" title={locales[lang].bottomLinks.contact} />
+      <BottomLink
+        to="/contact"
+        title={locales[lang].bottomLinks.contact}
+        lang={lang}
+      />
     </Layout>
   );
 }

@@ -48,7 +48,11 @@ export default ({ lang }: { lang: Languages }) => {
           <Skill src="/images/icons/Windows.svg" text="Windows" />
         </SkillsBlock>
       </div>
-      <BottomLink to="/projects" title={locales[lang].bottomLinks.projects} />
+      <BottomLink
+        to="/projects"
+        title={locales[lang].bottomLinks.projects}
+        lang={lang}
+      />
     </Layout>
   );
 };
