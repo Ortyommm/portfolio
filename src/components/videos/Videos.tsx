@@ -16,7 +16,11 @@ export default function Videos({ lang }: { lang: Languages }) {
 
   useEffect(() => {
     setLoading(true);
-    youtube("/").then((res) => {
+    youtube("/", {
+      params: {
+        maxResults: 15,
+      },
+    }).then((res) => {
       const videoIds = res.data.items.map(
         (item: { id: { videoId: string } }) => item.id.videoId
       );
