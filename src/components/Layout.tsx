@@ -48,6 +48,20 @@ export default function Layout({
         }}
       >
         <meta name="description" content={locales[lang].meta.description} />
+        <meta
+          property="og:image"
+          content="https://artemdev.com/images/other/og-image.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://artemdev.com${lang === "en" ? "/en" : ""}`}
+        />
+        <meta property="og:title" content="Artemdev.com" />
+        <meta
+          property="og:description"
+          content={locales[lang].meta.description}
+        />
       </Helmet>
       <div className="page">
         <Sidebar lang={lang} />
