@@ -57,7 +57,7 @@ export default function Layout({
           property="og:url"
           content={`https://artemdev.com${lang === "en" ? "/en" : ""}`}
         />
-        <meta property="og:title" content="Artemdev.com" />
+        <meta property="og:title" content="Artemdev" />
         <meta
           property="og:description"
           content={locales[lang].meta.description}
