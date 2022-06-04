@@ -11,6 +11,7 @@ export default function HTML(props: propTypes) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta property="og:image:url" content="/images/other/og-image.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
