@@ -1,11 +1,11 @@
 import { IconifyIcon } from "@iconify/react";
-import React from "react";
+import React, { ReactElement } from "react";
 import ContactItem from "./ContactItem";
 
 export default function ContactItems({
   contactsData = [],
 }: {
-  contactsData: { icon: IconifyIcon | string; href: string; title: string }[];
+  contactsData: { icon: ReactElement; href: string; title: string }[];
 }) {
   const contactEls = [];
   for (const contactData of contactsData) {

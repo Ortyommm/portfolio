@@ -1,17 +1,18 @@
-import { Icon, InlineIcon } from "@iconify/react";
-import baselineAccountCircle from "@iconify/icons-ic/baseline-account-circle";
-import baselineConstruction from "@iconify/icons-ic/baseline-construction";
-import baselineDashboard from "@iconify/icons-ic/baseline-dashboard";
-import baselineMail from "@iconify/icons-ic/baseline-mail";
-import telegramFill from "@iconify/icons-akar-icons/telegram-fill";
-import vkFill from "@iconify/icons-akar-icons/vk-fill";
-import githubFill from "@iconify/icons-akar-icons/github-fill";
-
 import * as cl from "./Sidebar.module.scss";
 import React from "react";
 import SidebarLinks from "./SidebarLinks";
 import { githubLink, telegramLink, vkLink } from "../../config";
 import { Languages } from "../../types";
+import {
+  ContactIcon,
+  GithubIcon,
+  ProfileIcon,
+  ProjectsIcon,
+  SkillsIcon,
+  TelegramIcon,
+  VideosIcon,
+  VkIcon,
+} from "../Icons/Icons";
 
 function localePrefix(locale: string) {
   if (locale === "ru") return "";
@@ -22,38 +23,38 @@ const Sidebar = ({ lang }: { lang: Languages }) => {
   const internalLinks = [
     {
       to: `${localePrefix(lang)}` || "/",
-      icon: baselineAccountCircle,
+      icon: ProfileIcon,
     },
     {
       to: `${localePrefix(lang)}/skills`,
-      icon: baselineConstruction,
+      icon: SkillsIcon,
     },
     {
       to: `${localePrefix(lang)}/projects`,
-      icon: baselineDashboard,
+      icon: ProjectsIcon,
     },
     {
       to: `${localePrefix(lang)}/contact`,
-      icon: baselineMail,
+      icon: ContactIcon,
     },
     {
       to: `${localePrefix(lang)}/videos`,
-      icon: "ic:round-smart-display",
+      icon: VideosIcon,
     },
   ];
 
   const externalLinks = [
     {
       to: vkLink,
-      icon: vkFill,
+      icon: VkIcon,
     },
     {
       to: telegramLink,
-      icon: telegramFill,
+      icon: TelegramIcon,
     },
     {
       to: githubLink,
-      icon: githubFill,
+      icon: GithubIcon,
     },
   ];
 

@@ -19,6 +19,15 @@ import Layout from "../../components/Layout";
 import BottomLink from "../../components/BottomLink/BottomLink";
 import { Languages } from "../../types";
 import locales from "../../data/locales";
+import {
+  CodeWarsIcon,
+  GithubIcon,
+  GmailIcon,
+  HabrIcon,
+  TelegramIcon,
+  VkIcon,
+  YoutubeIcon,
+} from "../Icons/Icons";
 
 export default function Contact({ lang }: { lang: Languages }) {
   const contactText = locales[lang].contacts;
@@ -26,38 +35,38 @@ export default function Contact({ lang }: { lang: Languages }) {
   const contactItems = [
     {
       href: telegramLink,
-      icon: telegramFill,
+      icon: TelegramIcon,
       title: "Telegram",
     },
     {
       href: vkLink,
-      icon: vkFill,
+      icon: VkIcon,
       title: "VK",
     },
     {
       href: gmailLink,
       title: "Gmail",
-      icon: "simple-icons:gmail",
+      icon: GmailIcon,
     },
     {
       href: githubLink,
       title: "Github",
-      icon: githubFill,
+      icon: GithubIcon,
     },
     {
       href: youtubeLink,
       title: "Youtube",
-      icon: "akar-icons:youtube-fill",
+      icon: YoutubeIcon,
     },
     {
       href: codeWarsLink,
       title: "Codewars",
-      icon: "cib:codewars",
+      icon: CodeWarsIcon,
     },
     {
       href: habrLink,
       title: "Habr",
-      icon: "simple-icons:habr",
+      icon: HabrIcon,
     },
   ];
 
