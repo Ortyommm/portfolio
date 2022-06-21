@@ -4,12 +4,13 @@ import * as cl from "./Sidebar.module.scss";
 import SidebarNavLink from "./SidebarNavLink";
 import React from "react";
 import SidebarLink from "./SidebarLink";
+import IconSvg from "../Icons/IconSvg";
 
 export default function SidebarLinks({
   linksData,
   isNavigationLinks,
 }: {
-  linksData: { icon: IconifyIcon | string; to: string }[];
+  linksData: { icon: IconifyIcon | string | JSX.Element; to: string }[];
   isNavigationLinks: boolean;
 }) {
   const linkEls = [];
@@ -19,7 +20,7 @@ export default function SidebarLinks({
       <CurrentLinkEl
         key={linkData.to}
         to={linkData.to}
-        icon={<Icon icon={linkData.icon} className={cl.icon} />}
+        icon={<IconSvg className={cl.icon}>{linkData.icon}</IconSvg>}
       />
     );
   }
