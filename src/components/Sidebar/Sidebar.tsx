@@ -44,10 +44,10 @@ const Sidebar = ({ lang }: { lang: Languages }) => {
   ];
 
   const externalLinks = [
-    {
+    /*    {
       to: vkLink,
       icon: VkIcon,
-    },
+    },*/
     {
       to: telegramLink,
       icon: TelegramIcon,
