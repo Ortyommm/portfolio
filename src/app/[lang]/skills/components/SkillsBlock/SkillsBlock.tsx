@@ -14,7 +14,7 @@ export function SkillsBlock({
 }) {
   return (
     <div className={styles.skills}>
-      <Heading type="h2">{title}</Heading>
+      <Heading type="h2" className={styles['skills__heading']}>{title}</Heading>
       {description ? <Paragraph>{description}</Paragraph> : null}
       <div className={styles.skills__wrapper}>{children}</div>
     </div>

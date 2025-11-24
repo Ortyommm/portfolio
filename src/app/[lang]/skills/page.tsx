@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: DefaultParams }) {
   return (
     <>
       <div className={styles.skills__container}>
-        <Heading type={"h1"}>{skillsText.title}</Heading>
+        <Heading type={"h1"} className={styles['skills__heading']}>{skillsText.title}</Heading>
 
         <SkillsBlock
           title="Frontend"

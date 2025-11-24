@@ -1,5 +1,7 @@
 @use '@/styles/media';
 
+$skillWidth: 10rem;
+
 .skills__container {
   display: flex;
   flex-direction: column;
@@ -9,13 +11,18 @@
 }
 
 .skills__wrapper {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 1.8rem;
-  gap: 1.8rem;
+  gap: 3.65rem;
+  @include media.laptop {
+    grid-template-columns: repeat(auto-fill, minmax($skillWidth, 1fr));
+  }
+}
+
+.skills__heading {
   @include media.tablet {
-    justify-content: space-around;
+    text-align: center;
   }
 }
 
@@ -33,7 +40,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  width: 8rem;
+  //width: 8rem;
   &__text {
     text-align: center;
   }
@@ -46,8 +53,8 @@
 
 .skill__img {
   position: relative;
-  width: 4.7rem;
-  height: 4.7rem;
+  width: $skillWidth;
+  height: $skillWidth;
   margin-bottom: 1.25rem;
 
 }
