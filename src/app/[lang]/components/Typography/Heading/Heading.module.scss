@@ -1,0 +1,31 @@
+@use "@/styles/animations";
+@use "@/styles/media";
+
+.heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  animation: textFall 0.5s;
+  word-break: break-word;
+
+  @include media.tablet {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  //@include media.phone {
+  //  font-size: 2rem;
+  //}
+}
+
+.h2 {
+  font-size: 3rem;
+
+  @include media.tablet {
+    font-size: 2.5rem;
+  }
+
+  //@include media.phone {
+  //  font-size: 1.5rem;
+  //}
+}

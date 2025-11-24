@@ -1,0 +1,26 @@
+@use '@/styles/_media';
+
+.container {
+  position: relative;
+  height: 100vh;
+  font-size: 1.25rem;
+  width: 80%;
+  font-weight: 400;
+  padding-top: 3.5rem;
+  color: var(--text-color);
+  margin: 0 auto;
+
+  @include media.tablet {
+    width: 90%;
+    padding-top: 2.5rem;
+  }
+}
+
+.page {
+  position: relative;
+  display: flex;
+  @include media.tablet{
+    display: block;
+  }
+  font-family: "Montserrat", sans-serif;
+}

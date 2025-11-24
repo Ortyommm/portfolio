@@ -1,0 +1,12 @@
+.root {
+  position: relative;
+  z-index: 9999;
+  color: var(--white-main);
+  padding: 1rem;
+  white-space: pre-line;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #EF3939;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .0) 100%);
+  backdrop-filter: blur(1px);
+}

@@ -1,0 +1,39 @@
+@use '@/styles/media';
+
+:root {
+  --text-color: #2f374f;
+  --red-main: #ef3939;
+  --red-light: #f34b46;
+  --white-main: #fafafa;
+  --grey-main: #ededed;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--red-light);
+  border-radius: 1em;
+  width: 6px;
+}

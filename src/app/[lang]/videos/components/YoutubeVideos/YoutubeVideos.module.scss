@@ -1,0 +1,11 @@
+@use "@/styles/media";
+
+.videos_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
+  @include media.laptop {
+    gap: 2rem;
+  }
+}

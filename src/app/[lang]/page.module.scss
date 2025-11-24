@@ -1,0 +1,45 @@
+@use "@/styles/media";
+@use "@/styles/animations";
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+.image_right {
+  margin-top: 50px;
+  align-self: flex-start;
+  max-width: 320px;
+  margin-left: 1.8rem;
+  flex: 2;
+  animation: rightToLeft 0.5s;
+
+
+  img {
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    height: fit-content;
+
+    transition: transform 0.4s, box-shadow 0.4s, opacity 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.fact {
+  @include media.laptop {
+    display: none;
+  }
+}

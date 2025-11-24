@@ -1,0 +1,20 @@
+
+.contact_item {
+  display: flex;
+  margin-bottom: 2.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+
+    svg {
+      font-size: 2.2rem;
+      margin-right: 1.9rem;
+    }
+  }
+}
+
+.contact_link {
+  color: var(--red-main);
+}

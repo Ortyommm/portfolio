@@ -1,0 +1,138 @@
+@use "@/styles/_media";
+
+$inactiveIconColor: #ffd1c6;
+$activeIconColor: #fcf8f7;
+.aside {
+  background-color: var(--red-light);
+  height: 100vh;
+  width: 5rem;
+  position: fixed;
+  z-index: 1000;
+  @include media.tablet {
+    width: 100vw;
+    height: 80px;
+    display: block;
+    position: static;
+  }
+
+  @include media.phone {
+    height: 50px;
+  }
+
+  nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media.tablet {
+      height: 100%;
+      width: 100vw;
+      flex-direction: row;
+      align-content: space-between;
+
+      div {
+        display: inline-flex;
+        flex-direction: row;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.fake_block {
+  width: 5rem;
+  @include media.tablet {
+    display: none;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: 2.75rem;
+  @include media.tablet {
+    font-size: 35px;
+  }
+
+  @include media.phone {
+    font-size: 25px;
+  }
+}
+
+@keyframes height {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50%;
+  }
+}
+
+a.icon__wrapper {
+  position: relative;
+  height: 5rem;
+  @media (max-height: 34rem) {
+    height: 4rem;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $inactiveIconColor;
+  transition: color 0.3s, border 1s;
+
+  @include media.tablet {
+    margin: 0 .4rem;
+    height: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 2px;
+    height: 0%;
+    background: $activeIconColor;
+    //transition: 0.2s height;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 2px;
+    height: 0%;
+    background: $activeIconColor;
+    //transition: 0.2s height;
+  }
+
+  &.active {
+    color: $activeIconColor !important;
+
+    &:before {
+      animation: 0.2s height forwards;
+      height: 50%;
+    }
+
+    &:after {
+      animation: 0.2s height forwards;
+      height: 50%;
+    }
+
+    @include media.tablet {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &:hover {
+    color: $activeIconColor !important;
+  }
+}

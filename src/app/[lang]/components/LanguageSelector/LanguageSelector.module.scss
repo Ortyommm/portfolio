@@ -1,0 +1,35 @@
+@use '@/styles/media';
+
+.language_container {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+
+  .image_wrapper {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  img {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  @include media.tablet {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: .6rem .3rem 0 .3rem;
+    width: 100%;
+    align-items: center;
+  }
+}

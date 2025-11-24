@@ -1,0 +1,39 @@
+.link {
+  overflow: hidden;
+  color: var(--red-light);
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    //margin-bottom: 10px;
+    margin-right: .5rem;
+    position: relative;
+    animation: bottomToTop 0.5s;
+    padding-bottom: 2px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 2px;
+      background: var(--red-light);
+      transition: width 0.2s;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  svg {
+    //margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--red-light);
+    animation: bottomToTop 0.5s;
+  }
+}

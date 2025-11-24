@@ -1,0 +1,33 @@
+@keyframes textFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(3.5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
