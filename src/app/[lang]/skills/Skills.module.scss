@@ -1,6 +1,7 @@
 @use '@/styles/media';
 
 $skillWidth: 10rem;
+$skillWidthPhone: 5.5rem;
 
 .skills__container {
   display: flex;
@@ -17,6 +18,10 @@ $skillWidth: 10rem;
   gap: 3.65rem;
   @include media.laptop {
     grid-template-columns: repeat(auto-fill, minmax($skillWidth, 1fr));
+  }
+
+  @include media.phone {
+    grid-template-columns: repeat(auto-fill, minmax($skillWidthPhone, 1fr));
   }
 }
 
@@ -47,7 +52,7 @@ $skillWidth: 10rem;
   //margin-bottom: 30px;
   //margin: 0 1.8rem 1.8rem 0;
   @include media.tablet {
-    margin-right: 1rem;
+    //margin-right: 1rem;
   }
 }
 
@@ -57,4 +62,8 @@ $skillWidth: 10rem;
   height: $skillWidth;
   margin-bottom: 1.25rem;
 
+  @include media.phone {
+    width: $skillWidthPhone;
+    height: $skillWidthPhone;
+  }
 }
