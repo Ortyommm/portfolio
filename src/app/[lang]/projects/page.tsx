@@ -90,18 +90,18 @@ export default async function Page({ params }: { params: DefaultParams }) {
         </>
       ),
     },
-    {
-      src: "/project-images/onenilla.png",
-      alt: projectsText.onenilla.title,
-      git: `${githubLink}/onenilla`,
-      href: "https://onenilla.netlify.app",
-      description: (
-        <>
-          <p>{projectsText.onenilla.description}</p>
-          <p>{projectsText.onenilla.description2}</p>
-        </>
-      ),
-    },
+    // {
+    //   src: "/project-images/onenilla.png",
+    //   alt: projectsText.onenilla.title,
+    //   git: `${githubLink}/onenilla`,
+    //   href: "https://onenilla.netlify.app",
+    //   description: (
+    //     <>
+    //       <p>{projectsText.onenilla.description}</p>
+    //       <p>{projectsText.onenilla.description2}</p>
+    //     </>
+    //   ),
+    // },
     {
       src: "/project-images/muziqo.png",
       alt: projectsText.muziqo.title,
@@ -122,7 +122,7 @@ export default async function Page({ params }: { params: DefaultParams }) {
         <div className={styles.projects__description}>
           <div>
             <Heading type={"h1"}>{projectsText.title}</Heading>
-            <Paragraph>{projectsText.description}</Paragraph>
+            <Paragraph>{projectsText.description} <StyledLink href={`/${lang}/resume.pdf`} target={'_blank'}>{projectsText.resume}</StyledLink>.</Paragraph>
           </div>
           <div className={styles.icons}>
             <div className={styles.icon_pencil}>

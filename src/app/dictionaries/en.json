@@ -13,7 +13,8 @@
   },
   "projects": {
     "title": "My projects",
-    "description": "On this page you can find some of my opensource/showcase projects.",
+    "description": "On this page you can find some of my opensource/showcase projects. For a more detailed look at my work experience, please see my",
+    "resume": "resume",
     "visit": "Visit",
     "github": "View on github",
     "thisSite": {
